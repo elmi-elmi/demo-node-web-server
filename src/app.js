@@ -5,15 +5,20 @@ const publicDirectoryPath = path.join(__dirname,'../public')
 
 const app = express();
 
+app.set('view engine', 'hbs');
 app.use(express.static(publicDirectoryPath));
 
 
-app.get('/help',(req,res)=>{
-    res.send(['help me please', 'what shal i do?'])
+app.get('',(req,res)=>{
+    res.render('index')
 })
-
 app.get('/about',(req,res)=>{
-    res.send('<h1>About Section</h1>');
+    res.render('about')
+})
+app.get('/help',(req,res)=>{
+    res.render('help',{
+        title:"I don't need any help"
+    })
 })
 
 app.get('/weather',(req,res)=>{
