@@ -6,3 +6,10 @@ h1{
 img{
     height: 40rem;
 }
+
+
+footer{
+    background-color: gray;
+    text-align: center;
+    margin-top: 4rem;
+}
