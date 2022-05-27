@@ -43,7 +43,7 @@ app.get('/help/*',(req,res)=>{
 })
 app.get('*',(req,res)=>{
     res.render('404',{
-        errorMessage: 'This page not found (404)',
+        errorMessage: 'This page not found.',
     })
 })
 
