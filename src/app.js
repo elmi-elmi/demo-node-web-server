@@ -2,6 +2,9 @@ const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
 
+const forecast = require('./utils/forecast');
+const geocode = require('./utils/geocode');
+
 const publicDirectoryPath = path.join(__dirname,'../public');
 const viewsPath = path.join(__dirname, '../templates/views');
 const partialsPath = path.join(__dirname,'../templates/partials');
@@ -30,10 +33,23 @@ app.get('/help',(req,res)=>{
 })
 
 app.get('/weather',(req,res)=>{
-    res.send({
-        forecast:'sunny',
-        location:'shiraz'
-    });
+    if(!req.query.address) return res.send({error: 'You must provide an address term.'})
+
+    geocode(req.query.address,(error,{lat, lng})=>{
+        if(error) return res.send({error});
+
+        forecast(lat, lng,(error,{current, location})=>{
+           return res.send({
+                country:location.country,
+                region:location.region,
+                tempreture: current.temperature,
+                feelslike: current.feelslike,
+
+            })
+        })
+
+    })
+
 })
 app.get('/help/*',(req,res)=>{
     res.render('404',{
@@ -41,6 +57,15 @@ app.get('/help/*',(req,res)=>{
 
     })
 })
+
+app.get('/products',(req,res)=>{
+    if(!req.query.search) return res.send({error:'You must provide a search term.'})
+    console.log(req.query)
+    res.send({
+        products:[]
+    })
+})
+
 app.get('*',(req,res)=>{
     res.render('404',{
         errorMessage: 'This page not found.',
