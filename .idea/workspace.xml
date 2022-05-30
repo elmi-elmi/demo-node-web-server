@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b713c565-df1a-4d5d-ae77-91ff63cb559b" name="Changes" comment="fetch api">
+    <list default="true" id="b713c565-df1a-4d5d-ae77-91ff63cb559b" name="Changes" comment="creating search form">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/views/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/templates/views/index.hbs" afterDir="false" />
     </list>
@@ -69,7 +71,7 @@
       <workItem from="1653559789497" duration="4692000" />
       <workItem from="1653639380997" duration="7434000" />
       <workItem from="1653738797025" duration="3923000" />
-      <workItem from="1653926162807" duration="2689000" />
+      <workItem from="1653926162807" duration="4814000" />
     </task>
     <task id="LOCAL-00001" summary="l4-middle">
       <created>1653469212273</created>
@@ -113,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653928271724</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="creating search form">
+      <created>1653929249942</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1653929249942</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,6 +147,7 @@
     <MESSAGE value="add style" />
     <MESSAGE value="404 style" />
     <MESSAGE value="fetch api" />
-    <option name="LAST_COMMIT_MESSAGE" value="fetch api" />
+    <MESSAGE value="creating search form" />
+    <option name="LAST_COMMIT_MESSAGE" value="creating search form" />
   </component>
 </project>
