@@ -16,7 +16,7 @@ console.log('Client side javascript file is loaded.')
 //         console.log(data)
 //     })
 // })
-const baseurl = 'http://localhost:3000/weather?address='
+const baseurl = '/weather?address='
 const form = document.querySelector('form');
 const search = document.querySelector('input');
 
